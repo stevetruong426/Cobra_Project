@@ -1,0 +1,22 @@
+import pandas as pd
+import numpy as mp
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv("salary_data_states_corrected.csv")
+
+df1=df['EMPLOYER_NAME'].value_counts(sort=True,ascending=False)
+#WHICH COMPANY OFFERS THE MOST JOBS IN THE DATA SET
+
+df['WORK_STATE'].value_counts(sort=True,ascending=False)
+#TOTAL NUMBER OF JOBS IN EACH STATE; WHICH STATE HAS THE MOST JOBS; WHICH STATE HAS THE LEAST
+
+df1 = df['WORK_STATE'].nunique()
+#NUMBER OF UNIQUE WORK STATES
+
+df1=df['JOB_TITLE'].value_counts(sort=True,ascending=False)
+df1 = df['JOB_TITLE'].nunique()
+#NUMBER OF UNIQUE JOB TITLES
+
+df['PREVAILING_WAGE_SOC_TITLE'].value_counts(sort=True,ascending=False)
+#COUNT OF VALUES IN DIFFERENT JOB TITLES
